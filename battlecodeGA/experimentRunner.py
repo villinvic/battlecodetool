@@ -60,7 +60,7 @@ def RUN(map_path="engine/src/main/battlecode/world/resources/", bot_path="exampl
             res = proc.game.terminate()
         print('Interrupted experiment !')
     print("Done.\nPrinting results :")
-    with open(tested, "w") as output_file:
+    with open(log_path, "w") as output_file:
         for i in matches.keys():
             result = "[%d] %s" %(i, matches[i].result)
             output_file.write(result+"\n")
