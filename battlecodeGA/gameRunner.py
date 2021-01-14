@@ -47,5 +47,8 @@ class GameRunner:
 
         winner = self.game.wait()
         loser = winner - 1
-        self.result = "Team %s WON vs %s ON %s" % (self.players[winner], self.players[loser], self.map)
+        if winner == 0:
+            self.result = "Team %s WON vs %s ON %s" % (*self.players, self.map)
+        else:
+            self.result = "Team %s LOST vs %s ON %s" % (*self.players, self.map)
         return winner
