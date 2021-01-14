@@ -63,7 +63,7 @@ def RUN(map_path="engine/src/main/battlecode/world/resources/", bot_path="exampl
     with open(tested, "w") as output_file:
         for i in matches.keys():
             result = "[%d] %s" %(i, matches[i].result)
-            output_file.write(result)
+            output_file.write(result+"\n")
             print(result)
 
         results = "[FINAL RESULTS]\n%d/%d (%.2f%%)" % (wins, last_index-wins, 100 * wins / float(last_index))
